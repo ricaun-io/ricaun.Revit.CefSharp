@@ -6,6 +6,11 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Build](../../actions/workflows/Build.yml/badge.svg)](../../actions)
 
+## PackageReference
+```xml
+<PackageReference Include="ricaun.Revit.CefSharp" Version="$(RevitVersion).*" IncludeAssets="build; compile" PrivateAssets="All" />
+```
+
 ## Revit - CefSharp
 * Revit 2023 - 92.0.260
 * Revit 2022 - 65.0.1
