@@ -19,7 +19,7 @@ namespace ricaun.Revit.CefSharps.Revit.Views
             Browser.Address = address;
             Browser.ConsoleMessage += (s, e) =>
             {
-                Console.WriteLine(e.Message);
+                //Console.WriteLine(e.Message);
             };
             Browser.TitleChanged += (s, e) =>
             {
@@ -31,8 +31,8 @@ namespace ricaun.Revit.CefSharps.Revit.Views
         #region InitializeWindow
         private void InitializeWindow()
         {
-            this.MinHeight = 480;
-            this.MinWidth = 320;
+            this.MinHeight = 560;
+            this.MinWidth = 420;
             this.SizeToContent = SizeToContent.WidthAndHeight;
             this.ShowInTaskbar = false;
             this.ResizeMode = ResizeMode.NoResize;
