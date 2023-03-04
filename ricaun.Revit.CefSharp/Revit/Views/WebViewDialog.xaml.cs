@@ -19,7 +19,7 @@ namespace ricaun.Revit.CefSharps.Revit.Views
             Browser.Address = address;
             Browser.ConsoleMessage += (s, e) =>
             {
-                //Console.WriteLine(e.Message);
+                Console.WriteLine($"Web: {e.Message}");
             };
             Browser.TitleChanged += (s, e) =>
             {
