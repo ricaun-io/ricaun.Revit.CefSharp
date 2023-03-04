@@ -55,6 +55,7 @@ namespace ricaun.Revit.CefSharps.Revit
                 webViewDialog.Closed += (s, e) => { webViewDialog = null; };
                 webViewDialog.Show();
             }
+            webViewDialog.Activate();
         }
     }
 
