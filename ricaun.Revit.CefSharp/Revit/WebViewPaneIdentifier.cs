@@ -11,7 +11,7 @@ namespace ricaun.Revit.CefSharps.Revit
         /// <returns></returns>
         public static Guid GetGuid()
         {
-            return new Guid("90FA55E9-AA4F-4F90-92FF-09761A098BED");
+            return new Guid("90FA55E9-AA4F-4F90-92FF-09761A098BF1");
         }
 
         /// <summary>

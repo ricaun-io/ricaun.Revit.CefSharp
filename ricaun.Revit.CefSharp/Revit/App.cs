@@ -59,7 +59,8 @@ namespace ricaun.Revit.CefSharps.Revit
             //    if (!webDockablePane.IsShown())
             //        webDockablePane.Show();
 
-            //    WebViewPaneIdentifier.Page.SetAddress(address);
+            //    if (WebViewPaneIdentifier.Page is not null)
+            //        WebViewPaneIdentifier.Page.SetAddress(address);
             //    return;
             //}
 

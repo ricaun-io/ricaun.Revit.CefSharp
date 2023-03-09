@@ -49,9 +49,9 @@ namespace ricaun.Revit.CefSharps.Revit.Views
             // Define initial pane position in Revit ui.
             data.InitialState = new DockablePaneState
             {
-                DockPosition = DockPosition.Floating,
+                DockPosition = DockPosition.Right,
             };
-            data.InitialState.SetFloatingRectangle(new Rectangle(0, 0, 480, 480));
+            //data.InitialState.SetFloatingRectangle(new Rectangle(0, 0, 480, 480));
             data.VisibleByDefault = false;
         }
     }
