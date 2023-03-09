@@ -8,7 +8,5 @@
         xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         mc:Ignorable="d">
 
-    <Grid>
-        <wpf:ChromiumWebBrowser x:Name="Browser"></wpf:ChromiumWebBrowser>
-    </Grid>
+    <local:WebViewPage x:Name="WebViewPage"></local:WebViewPage>
 </Window>
