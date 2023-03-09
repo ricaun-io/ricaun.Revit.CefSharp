@@ -11,6 +11,8 @@ namespace ricaun.Revit.CefSharps.Revit.Views
         {
             InitializeComponent();
             InitializeWindow();
+            this.InitializeCloseEvents();
+            this.InitializeResizeWithoutMinimizeMaximize();
             InitializeAddress(address);
         }
 
