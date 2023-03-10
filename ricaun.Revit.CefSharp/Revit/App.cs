@@ -30,6 +30,8 @@ namespace ricaun.Revit.CefSharps.Revit
             textBox.Value = AddressBase;
             textBox.EnterPressed += TextBox_EnterPressed;
 
+            //WebViewPaneIdentifier.RegisterDockablePane(application);
+
             return Result.Succeeded;
         }
 
@@ -49,9 +51,22 @@ namespace ricaun.Revit.CefSharps.Revit
         static WebViewDialog webViewDialog;
         internal static void OpenWebViewDialog()
         {
+            var address = textBox.Value.ToString();
+
+            //var webDockablePane = WebViewPaneIdentifier.DockablePane;
+            //if (webDockablePane is not null)
+            //{
+            //    if (!webDockablePane.IsShown())
+            //        webDockablePane.Show();
+
+            //    if (WebViewPaneIdentifier.Page is not null)
+            //        WebViewPaneIdentifier.Page.SetAddress(address);
+            //    return;
+            //}
+
             if (webViewDialog is null)
             {
-                webViewDialog = new WebViewDialog(textBox.Value.ToString());
+                webViewDialog = new WebViewDialog(address);
                 webViewDialog.Closed += (s, e) => { webViewDialog = null; };
                 webViewDialog.Show();
             }

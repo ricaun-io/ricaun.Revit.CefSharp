@@ -1,6 +1,4 @@
-﻿using CefSharp;
-using CefSharp.Wpf;
-using System;
+﻿using System;
 using System.Windows;
 
 namespace ricaun.Revit.CefSharps.Revit.Views
@@ -11,21 +9,9 @@ namespace ricaun.Revit.CefSharps.Revit.Views
         {
             InitializeComponent();
             InitializeWindow();
-            InitializeAddress(address);
-        }
-
-        private void InitializeAddress(string address)
-        {
-            Browser.Address = address;
-            Browser.ConsoleMessage += (s, e) =>
-            {
-                //Console.WriteLine(e.Message);
-            };
-            Browser.TitleChanged += (s, e) =>
-            {
-                this.Title = $"{Browser.Title} - CefSharp: {CefSharp.Cef.CefSharpVersion}";
-            };
-            Browser.MenuHandler = new NoMenuContextHandler();
+            this.InitializeCloseEvents();
+            this.InitializeResizeWithoutMinimizeMaximize();
+            this.WebViewPage.SetAddress(address);
         }
 
         #region InitializeWindow

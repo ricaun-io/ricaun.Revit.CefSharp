@@ -7,7 +7,7 @@ using System;
 namespace ricaun.Revit.CefSharps.Revit.Commands
 {
     [Transaction(TransactionMode.Manual)]
-    public class Command : IExternalCommand
+    public class Command : IExternalCommand, IExternalCommandAvailability
     {
         public Result Execute(ExternalCommandData commandData, ref string message, ElementSet elementSet)
         {
@@ -16,6 +16,11 @@ namespace ricaun.Revit.CefSharps.Revit.Commands
             App.OpenWebViewDialog();
 
             return Result.Succeeded;
+        }
+
+        public bool IsCommandAvailable(UIApplication applicationData, CategorySet selectedCategories)
+        {
+            return true;
         }
     }
 }
