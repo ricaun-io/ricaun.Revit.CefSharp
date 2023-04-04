@@ -8,13 +8,7 @@
     <LangVersion>latest</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-    <Configurations>
-      Debug 2023; 2023;
-      Debug 2022; 2022;
-      Debug 2021; 2021;
-      Debug 2020; 2020;
-      Debug 2019; 2019;
-    </Configurations>
+    <Configurations>Debug 2023;2023;Debug 2022;2022;Debug 2021;2021;Debug 2020;2020;Debug 2019;2019;2024</Configurations>
   </PropertyGroup>
 
   <!-- RevitVersion -->
@@ -58,6 +52,12 @@
     <When Condition="$(Configuration.Contains('2023'))">
       <PropertyGroup>
         <RevitVersion>2023</RevitVersion>
+        <TargetFramework>net48</TargetFramework>
+      </PropertyGroup>
+    </When>
+    <When Condition="$(Configuration.Contains('2024'))">
+      <PropertyGroup>
+        <RevitVersion>2024</RevitVersion>
         <TargetFramework>net48</TargetFramework>
       </PropertyGroup>
     </When>
