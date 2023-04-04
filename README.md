@@ -13,6 +13,7 @@
 ```
 
 ## Revit - CefSharp
+* Revit 2024 - 105.3.390
 * Revit 2023 - 92.0.260
 * Revit 2022 - 65.0.1
 * Revit 2021 - 65.0.1
