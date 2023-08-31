@@ -7,6 +7,9 @@
 [![Build](https://github.com/ricaun-io/ricaun.Revit.CefSharp/actions/workflows/Build.yml/badge.svg)](https://github.com/ricaun-io/ricaun.Revit.CefSharp/actions)
 [![Release](https://img.shields.io/nuget/v/ricaun.Revit.CefSharp?logo=nuget&label=release&color=blue)](https://www.nuget.org/packages/ricaun.Revit.CefSharp)
 
+This package automatically provides access to the appropriate `CefSharp` version that has already been loaded and initialised by Revit, cf. the explanation 
+on [encountering an error while using CefSharp](https://forums.autodesk.com/t5/revit-api-forum/encountered-an-error-while-using-cefsharp/m-p/12209481#M73837).
+
 ## PackageReference
 ```xml
 <PackageReference Include="ricaun.Revit.CefSharp" Version="$(RevitVersion).*" IncludeAssets="build; compile" PrivateAssets="All" />
