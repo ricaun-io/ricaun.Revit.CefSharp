@@ -16,6 +16,7 @@ on [encountering an error while using CefSharp](https://forums.autodesk.com/t5/r
 ```
 
 ## Revit - CefSharp
+* Revit 2025 - 119.4.30
 * Revit 2024 - 105.3.390
 * Revit 2023 - 92.0.260
 * Revit 2022 - 65.0.1
