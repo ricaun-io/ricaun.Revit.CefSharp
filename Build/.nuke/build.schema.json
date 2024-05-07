@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "title": "Build Schema",
   "$ref": "#/definitions/build",
+  "title": "Build Schema",
   "definitions": {
     "build": {
       "type": "object",
@@ -65,12 +65,21 @@
           "type": "boolean",
           "description": "Shows the execution plan (HTML)"
         },
+        "PreReleaseFilter": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
         "Profile": {
           "type": "array",
           "description": "Defines the profiles to load",
           "items": {
             "type": "string"
           }
+        },
+        "ReleaseFolder": {
+          "type": "string"
         },
         "ReleaseNameVersion": {
           "type": "boolean"
@@ -96,8 +105,10 @@
               "Build",
               "Clean",
               "Compile",
+              "GitPreRelease",
               "GitRelease",
               "Pack",
+              "PrePack",
               "Release",
               "Sign"
             ]
@@ -116,12 +127,17 @@
               "Build",
               "Clean",
               "Compile",
+              "GitPreRelease",
               "GitRelease",
               "Pack",
+              "PrePack",
               "Release",
               "Sign"
             ]
           }
+        },
+        "UnlistNuget": {
+          "type": "boolean"
         },
         "Verbosity": {
           "type": "string",

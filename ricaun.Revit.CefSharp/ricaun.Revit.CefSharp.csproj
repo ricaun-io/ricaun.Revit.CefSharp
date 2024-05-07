@@ -8,7 +8,7 @@
     <LangVersion>latest</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>None</ResolveAssemblyWarnOrErrorOnTargetArchitectureMismatch>
-    <Configurations>Debug 2023;2023;Debug 2022;2022;Debug 2021;2021;Debug 2020;2020;Debug 2019;2019;2024</Configurations>
+    <Configurations>Debug 2023;2023;Debug 2022;2022;Debug 2021;2021;Debug 2020;2020;Debug 2019;2019;2024;Debug 2024;Debug 2025;2025</Configurations>
   </PropertyGroup>
 
   <!-- RevitVersion -->
@@ -61,6 +61,12 @@
         <TargetFramework>net48</TargetFramework>
       </PropertyGroup>
     </When>
+    <When Condition="$(Configuration.Contains('2025'))">
+      <PropertyGroup>
+        <RevitVersion>2025</RevitVersion>
+        <TargetFramework>net8.0-windows</TargetFramework>
+      </PropertyGroup>
+    </When>
     <Otherwise>
       <PropertyGroup>
         <RevitVersion>2017</RevitVersion>
@@ -68,6 +74,13 @@
       </PropertyGroup>
     </Otherwise>
   </Choose>
+
+  <!-- Net Core -->
+  <PropertyGroup Condition="!$(TargetFramework.StartsWith('net4'))">
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+  </PropertyGroup>
 
   <!-- Release -->
   <PropertyGroup Condition="!$(Configuration.Contains('Debug'))">
@@ -168,6 +181,13 @@
     <IncludeBuildOutput>false</IncludeBuildOutput>
   </PropertyGroup>
 
+  <!-- Release - Net Core -->
+  <PropertyGroup Condition="!$(TargetFramework.StartsWith('net4')) and !$(Configuration.Contains('Debug'))">
+    <UseWPF>false</UseWPF>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  
   <ItemGroup Condition="!$(Configuration.Contains('Debug'))">
     <Compile Remove="Revit\**" />
     <EmbeddedResource Remove="Revit\**" />
