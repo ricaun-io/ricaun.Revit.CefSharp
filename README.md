@@ -24,6 +24,36 @@ on [encountering an error while using CefSharp](https://forums.autodesk.com/t5/r
 * Revit 2020 - 65.0.1
 * Revit 2019 - 57.0.0
 
+## Usage
+
+The `CefSharp` is already initialized inside Revit before any plugin, just use the `CefSharp.Wpf` reference inside your wpf works without any initializetion requirement.
+
+```xaml
+xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+```
+
+Use the `cef:ChromiumWebBrowser` with an `Address` to create a web browser in your wpf.
+
+```xaml
+<cef:ChromiumWebBrowser Address="https://github.com/ricaun-io/ricaun.Revit.CefSharp" />
+```
+
+### Example
+
+```xaml
+<Window x:Class="RevitAddin.WebView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        mc:Ignorable="d">
+    <Grid>
+        <cef:ChromiumWebBrowser Address="https://github.com/ricaun-io/ricaun.Revit.CefSharp" />
+    </Grid>
+</Window>
+```
+
 ## Release
 
 * [Latest release](https://github.com/ricaun-io/ricaun.Revit.CefSharp/releases/latest)

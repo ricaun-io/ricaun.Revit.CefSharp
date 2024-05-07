@@ -112,10 +112,6 @@
     <ProjectGuid>{3AF11FA2-A8BB-4609-AD20-56DEF2652FAC}</ProjectGuid>
   </PropertyGroup>
 
-  <PropertyGroup Condition="$(Configuration.Contains('2025'))">
-    <Version>$(RevitVersion).0.0-alpha</Version>
-  </PropertyGroup>
-
   <PropertyGroup>
     <PackageAssemblyVersion>.$(Version)</PackageAssemblyVersion>
   </PropertyGroup>

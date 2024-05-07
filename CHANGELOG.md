@@ -4,9 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2025.0.0] / 2025-04-30
+## [2025.0.0] / 2025-05-07
 ### Features
-- Version 2025
+- Revit Version 2025
+- Update Readme with example
 
 ## [2024.0.0] / 2024-04-04
 ### Features
