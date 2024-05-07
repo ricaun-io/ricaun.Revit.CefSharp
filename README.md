@@ -7,7 +7,7 @@
 [![Build](https://github.com/ricaun-io/ricaun.Revit.CefSharp/actions/workflows/Build.yml/badge.svg)](https://github.com/ricaun-io/ricaun.Revit.CefSharp/actions)
 [![Release](https://img.shields.io/nuget/v/ricaun.Revit.CefSharp?logo=nuget&label=release&color=blue)](https://www.nuget.org/packages/ricaun.Revit.CefSharp)
 
-This package automatically provides access to the appropriate `CefSharp` version that has already been loaded and initialised by Revit, cf. the explanation 
+This package automatically provides access to the appropriate `CefSharp` version that has already been loaded and initialized by Revit, cf. the explanation 
 on [encountering an error while using CefSharp](https://forums.autodesk.com/t5/revit-api-forum/encountered-an-error-while-using-cefsharp/m-p/12209481#M73837).
 
 ## PackageReference
@@ -26,7 +26,7 @@ on [encountering an error while using CefSharp](https://forums.autodesk.com/t5/r
 
 ## Usage
 
-The `CefSharp` is already initialized inside Revit before any plugin, just use the `CefSharp.Wpf` reference inside your wpf works without any initializetion requirement.
+The `CefSharp` is already initialized inside Revit before any plugin, just use the `CefSharp.Wpf` reference inside your wpf works without any initialization requirement.
 
 ```xaml
 xmlns:cef="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
@@ -60,7 +60,7 @@ Use the `cef:ChromiumWebBrowser` with an `Address` to create a web browser in yo
 
 ## License
 
-This project is [licensed](LICENSE) under the [MIT Licence](https://en.wikipedia.org/wiki/MIT_License).
+This project is [licensed](LICENSE) under the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
 
 ---
 
